@@ -1,11 +1,11 @@
 const apps = [
 {
-    name:"Snake",
-    author:"You",
-    version:"1.0.0",
-    description:"Classic snake game.",
+    name:"BrowseDNS",
+    author:"",
+    version:"/",
+    description:"Allows browsing the internet.",
     icon:"icons/snake.png",
-    url:"apps/snake/index.html"
+    url:"https://browsedns.com/"
 },
 {
     name:"Calculator",
