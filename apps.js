@@ -54,30 +54,45 @@ function updateInfo(){
 
 function renderDock(){
 
-    const dock = document.getElementById("dock-apps");
-    dock.innerHTML = "";
+function renderDock(){
 
-    const end = Math.min(start + visibleSlots, apps.length);
+```
+const dock = document.getElementById("dock-apps");
+dock.innerHTML = "";
 
-    for(let i = start; i < end; i++){
+const maxStart = Math.max(0, apps.length - visibleSlots);
 
-        const div = document.createElement("div");
+if(start > maxStart){
+    start = maxStart;
+}
 
-        div.className = "app" + (i === selected ? " selected" : "");
+if(start < 0){
+    start = 0;
+}
 
-        div.innerHTML = `
-            <div class="app-title">${apps[i].name}</div>
-            <img src="${apps[i].icon}">
-        `;
+const end = Math.min(start + visibleSlots, apps.length);
 
-        div.onclick = () => {
-            selected = i;
-            updateInfo();
-            renderDock();
-        };
+for(let i = start; i < end; i++){
 
-        dock.appendChild(div);
-    }
+    const div = document.createElement("div");
+
+    div.className = "app" + (i === selected ? " selected" : "");
+
+    div.innerHTML = `
+        <div class="app-title">${apps[i].name}</div>
+        <img src="${apps[i].icon}">
+    `;
+
+    div.onclick = () => {
+        selected = i;
+        updateInfo();
+        renderDock();
+    };
+
+    dock.appendChild(div);
+}
+```
+
 }
 
 /* ---------------- OPEN APP (NEW WINDOW) ---------------- */
@@ -95,30 +110,38 @@ window.open(app.url, "_blank");
 
 function moveRight(){
 
-    if(selected < apps.length - 1){
-        selected++;
+```
+if(selected < apps.length - 1){
 
-        if(selected > start + visibleSlots - 2){
-            start++;
-        }
+    selected++;
 
-        updateInfo();
-        renderDock();
+    if(selected >= start + visibleSlots){
+        start++;
     }
+
+    updateInfo();
+    renderDock();
+}
+```
+
 }
 
 function moveLeft(){
 
-    if(selected > 0){
-        selected--;
+```
+if(selected > 0){
 
-        if(selected < start + 1){
-            start--;
-        }
+    selected--;
 
-        updateInfo();
-        renderDock();
+    if(selected < start){
+        start--;
     }
+
+    updateInfo();
+    renderDock();
+}
+```
+
 }
 
 /* ---------------- INPUT ---------------- */
