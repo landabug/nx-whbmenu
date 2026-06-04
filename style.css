@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+/* top gray section */
+
+#top-area{
+    flex:1;
+    background:#6d6d6d;
+    color:white;
+}
+
+#header{
+    padding:20px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+#app-info{
+    display:flex;
+    gap:40px;
+    padding:20px 40px;
+}
+
+#large-icon{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+}
+
+#meta{
+    max-width:900px;
+}
+
+#app-name{
+    font-size:42px;
+}
+
+#app-author{
+    margin-top:8px;
+    font-size:20px;
+}
+
+#app-version{
+    margin-top:4px;
+    font-size:18px;
+}
+
+#app-description{
+    margin-top:20px;
+    font-size:20px;
+    line-height:1.4;
+}
+
+/* bottom blue dock */
+
+#dock{
+    height:180px;
+    background:#3477ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#dock-apps{
+    display:flex;
+    gap:24px;
+}
+
+.app{
+    width:120px;
+    text-align:center;
+    color:white;
+}
+
+.app-title{
+    margin-bottom:4px;
+    font-size:14px;
+    font-weight:bold;
+    height:18px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+.app img{
+    width:96px;
+    height:96px;
+    border-radius:8px;
+}
+
+.selected img{
+    border:4px solid white;
+}
