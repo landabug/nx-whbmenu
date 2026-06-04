@@ -4,7 +4,7 @@ const apps = [
     author:"BrowseDNS Team",
     version:"/",
     description:"Allows browsing the internet.",
-    icon:"icons/snake.png",
+    icon:"icons/BrowseDNS.png",
     url:"https://browsedns.com/"
 },
 {
@@ -12,7 +12,7 @@ const apps = [
     author:"landabug",
     version:"2.0.0",
     description:"Web app to test all kinds of things in your browser.",
-    icon:"icons/calc.png",
+    icon:"icons/VoidDock.png",
     url:"https://landabug.github.io/voiddock/"
 },
 {
