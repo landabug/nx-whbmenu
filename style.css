@@ -20,7 +20,7 @@ body{
 
 #top-area{
     flex:1;
-    background:linear-gradient(to bottom, #ff7e5f, #feb47b);
+    background:#555555;
     color:white;
 }
 
@@ -63,7 +63,7 @@ body{
 
 #dock{
     height:180px;
-    background:#00bcd4;
+    background:#555555;
     display:flex;
     align-items:center;
     justify-content:center;
