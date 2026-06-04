@@ -139,3 +139,54 @@ document.addEventListener("keydown",(e)=>{
 
 updateInfo();
 renderDock();
+
+let gamepadIndex = null;
+let gpCooldown = false;
+
+/* CONNECT / DISCONNECT */
+
+window.addEventListener("gamepadconnected", (e) => {
+    gamepadIndex = e.gamepad.index;
+});
+
+window.addEventListener("gamepaddisconnected", () => {
+    gamepadIndex = null;
+});
+
+/* JOYSTICK LOOP */
+
+function pollGamepad() {
+
+    if (gamepadIndex !== null) {
+
+        const gp = navigator.getGamepads()[gamepadIndex];
+
+        if (gp && !gpCooldown) {
+
+            const x = gp.axes[0];
+            const deadzone = 0.5;
+
+            if (x < -deadzone) {
+                moveLeft();
+                gpCooldown = true;
+                setTimeout(() => gpCooldown = false, 180);
+            }
+
+            if (x > deadzone) {
+                moveRight();
+                gpCooldown = true;
+                setTimeout(() => gpCooldown = false, 180);
+            }
+
+            if (gp.buttons[0].pressed) {
+                openApp();
+                gpCooldown = true;
+                setTimeout(() => gpCooldown = false, 300);
+            }
+        }
+    }
+
+    requestAnimationFrame(pollGamepad);
+}
+
+pollGamepad();
