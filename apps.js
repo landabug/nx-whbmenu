@@ -88,11 +88,7 @@ function openApp(){
 
     if(app.url === "#") return;
 
-    window.open(
-        app.url,
-        "_blank",
-        "width=1000,height=700"
-    );
+window.open(app.url, "_blank");
 }
 
 /* ---------------- NAVIGATION ---------------- */
