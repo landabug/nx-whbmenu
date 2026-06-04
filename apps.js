@@ -1,22 +1,22 @@
 const apps = [
 {
     name:"BrowseDNS",
-    author:"",
+    author:"BrowseDNS Team",
     version:"/",
     description:"Allows browsing the internet.",
     icon:"icons/snake.png",
     url:"https://browsedns.com/"
 },
 {
-    name:"Calculator",
-    author:"You",
-    version:"1.0.0",
-    description:"Simple calculator tool.",
+    name:"VoidDock",
+    author:"landabug",
+    version:"2.0.0",
+    description:"Web app to test all kinds of things in your browser.",
     icon:"icons/calc.png",
-    url:"apps/calculator/index.html"
+    url:"https://landabug.github.io/voiddock/"
 },
 {
-    name:"Browser",
+    name:"Placeholder",
     author:"You",
     version:"1.0.0",
     description:"Open web pages.",
@@ -24,7 +24,7 @@ const apps = [
     url:"https://example.com"
 },
 {
-    name:"Settings",
+    name:"Placeholder",
     author:"You",
     version:"1.0.0",
     description:"System settings panel.",
