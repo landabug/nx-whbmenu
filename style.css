@@ -3,48 +3,91 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+user-select:none;
+-webkit-user-select:none;
 }
 
-html,body{
-width:100%;
-height:100%;
+html{
+width:100vw;
+height:100vh;
 overflow:hidden;
+position:fixed;
 }
 
 body{
+width:100vw;
+height:100vh;
+overflow:hidden;
 display:flex;
 flex-direction:column;
+touch-action:none;
+background:#6d6d6d;
 }
 
-/* TOP AREA (GRAY) */
+/* TOP AREA */
 
 #top-area{
 flex:1;
-background:#6d6d6d;
+min-height:0;
+
+```
+background:linear-gradient(
+    to bottom,
+    #7b7b7b,
+    #666666
+);
+
 color:white;
+```
+
 }
 
 #header{
 padding:16px 20px;
+
+```
 font-size:22px;
 font-weight:bold;
+
+text-shadow:
+    0 2px 4px rgba(0,0,0,.3);
+```
+
 }
 
 #app-info{
 display:flex;
 gap:35px;
+
+```
 padding:20px 40px;
+```
+
 }
 
 #large-icon{
 width:220px;
 height:220px;
+
+```
 object-fit:cover;
-border-radius:10px;
+
+border-radius:18px;
+
+box-shadow:
+    0 10px 25px rgba(0,0,0,.3);
+```
+
 }
 
 #meta h1{
-font-size:42px;
+font-size:48px;
+
+```
+text-shadow:
+    0 2px 4px rgba(0,0,0,.25);
+```
+
 }
 
 #app-author,
@@ -55,48 +98,75 @@ margin-top:6px;
 
 #app-description{
 margin-top:18px;
+
+```
 font-size:18px;
+line-height:1.4;
+
 max-width:700px;
+```
+
 }
 
-/* BOTTOM DOCK (BLUE) */
+/* BOTTOM DOCK */
 
 #dock{
 height:180px;
-background:#3477ff;
+flex-shrink:0;
+
+```
+background:linear-gradient(
+    to bottom,
+    #4d89ff,
+    #2d6fff
+);
+
 display:flex;
 align-items:center;
 justify-content:center;
+
+box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.15);
+```
+
 }
 
 #dock-apps{
 display:flex;
 gap:18px;
+align-items:center;
 }
 
 /* APP ITEM */
 
 .app{
 width:120px;
+
+```
 text-align:center;
 color:white;
+
 cursor:pointer;
+```
+
 }
 
-/* TITLE FLOATS OVER ICON */
+/* TITLE ABOVE ICON */
 
 .app-title{
 font-size:13px;
 font-weight:bold;
-line-height:1;
 
 ```
+margin-bottom:2px;
+
+line-height:1;
+
 position:relative;
-top:10px;
+top:6px;
 
-margin-bottom:-2px;
-
-z-index:2;
+text-shadow:
+    0 1px 2px rgba(0,0,0,.4);
 ```
 
 }
@@ -104,11 +174,28 @@ z-index:2;
 .app img{
 width:92px;
 height:92px;
+
+```
 border-radius:10px;
+
 margin-top:6px;
+
+transition:
+    transform .15s,
+    box-shadow .15s;
+```
+
 }
 
 .app.selected img{
 outline:3px solid white;
 outline-offset:2px;
+
+```
+transform:scale(1.08);
+
+box-shadow:
+    0 0 20px rgba(255,255,255,.6);
+```
+
 }
