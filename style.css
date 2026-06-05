@@ -63,7 +63,7 @@ body{
 
 #dock{
     height:180px;
-    background:#2E9CFFFF;
+    background:linear-gradient(to bottom, #5fcaca, #44b4c8);
     display:flex;
     align-items:center;
     justify-content:center;
