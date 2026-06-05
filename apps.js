@@ -54,6 +54,14 @@ function updateInfo(){
 
 function renderDock(){
 
+    start = Math.max(
+    0,
+    Math.min(
+        start,
+        Math.max(0, apps.length - visibleSlots)
+    )
+);
+
     const dock = document.getElementById("dock-apps");
     dock.innerHTML = "";
 
@@ -96,10 +104,11 @@ window.open(app.url, "_blank");
 function moveRight(){
 
     if(selected < apps.length - 1){
+
         selected++;
 
-        if(selected > start + visibleSlots - 2){
-            start++;
+        if(selected >= start + visibleSlots){
+            start = selected - visibleSlots + 1;
         }
 
         updateInfo();
@@ -110,10 +119,11 @@ function moveRight(){
 function moveLeft(){
 
     if(selected > 0){
+
         selected--;
 
-        if(selected < start + 1){
-            start--;
+        if(selected < start){
+            start = selected;
         }
 
         updateInfo();
