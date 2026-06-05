@@ -20,7 +20,7 @@ const apps = [
     author:"landabug",
     version:"2.0.0",
     description:"Web app to test all kinds of things in your browser.",
-    icon:"icons/VoidDock.png",
+    icon:"icons/VoidDock.jpeg",
     url:"https://landabug.github.io/voiddock/"
 },
 {
@@ -28,7 +28,7 @@ const apps = [
     author:"You",
     version:"1.0.0",
     description:"More Apps will be added soon.",
-    icon:"icons/placeholder.png",
+    icon:"icons/Placeholder.png",
     url:"#"
 }
 ];
