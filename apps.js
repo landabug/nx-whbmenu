@@ -4,7 +4,7 @@ const apps = [
     author:"landabug",
     version:"/",
     description:"Fun Fact: You are currently in this application.",
-    icon:"icons/hbmenu.png",
+    icon:"icons/hbmenu.jpeg",
     url:"https://landabug.github.io/nx-whbmenu/"
 },
 {
