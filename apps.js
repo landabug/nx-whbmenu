@@ -3,7 +3,7 @@ const apps = [
     name:"nx-whbmenu",
     author:"landabug",
     version:"/",
-    description:"If you didn't know: You are currently in this application.",
+    description:"Fun Fact: You are currently in this application.",
     icon:"icons/hbmenu.png",
     url:"https://landabug.github.io/nx-whbmenu/"
 },
@@ -27,8 +27,8 @@ const apps = [
     name:"Placeholder",
     author:"You",
     version:"1.0.0",
-    description:"System settings panel.",
-    icon:"icons/settings.png",
+    description:"More Apps will be added soon.",
+    icon:"icons/placeholder.png",
     url:"#"
 }
 ];
