@@ -1,5 +1,13 @@
 const apps = [
 {
+    name:"nx-whbmenu",
+    author:"landabug",
+    version:"/",
+    description:"If you didn't know: You are currently in this application.",
+    icon:"icons/hbmenu.png",
+    url:"https://landabug.github.io/nx-whbmenu/"
+},
+{
     name:"BrowseDNS",
     author:"BrowseDNS Team",
     version:"/",
@@ -14,14 +22,6 @@ const apps = [
     description:"Web app to test all kinds of things in your browser.",
     icon:"icons/VoidDock.png",
     url:"https://landabug.github.io/voiddock/"
-},
-{
-    name:"Placeholder",
-    author:"You",
-    version:"1.0.0",
-    description:"Open web pages.",
-    icon:"icons/browser.png",
-    url:"https://example.com"
 },
 {
     name:"Placeholder",
