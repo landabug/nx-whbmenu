@@ -89,7 +89,7 @@ body{
     margin-bottom:2px;
     line-height:1;
     position:relative;
-    top:6px; /* pushes title closer OVER the icon */
+    top:4px;
 }
 
 .app img{
