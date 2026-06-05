@@ -4,7 +4,7 @@ const apps = [
     author:"landabug",
     version:"/",
     description:"Fun Fact: You are currently in this application.",
-    icon:"icons/hbmenu.jpeg",
+    icon:"icons/hbmenu.png",
     url:"https://landabug.github.io/nx-whbmenu/"
 },
 {
@@ -12,7 +12,7 @@ const apps = [
     author:"BrowseDNS Team",
     version:"/",
     description:"Allows browsing the internet.",
-    icon:"icons/BrowseDNS.png",
+    icon:"icons/BrowseDNS.jpeg",
     url:"https://browsedns.com/"
 },
 {
